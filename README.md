@@ -1,4 +1,4 @@
-# Bodyfat-Prediction
+# Bodyfat Prediction
 
 Shuo Li, Yunze Wang, Xinrui Zhong
 
