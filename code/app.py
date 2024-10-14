@@ -33,8 +33,9 @@ app_ui = ui.page_fluid(
     ui.output_table("jackson_pollock_table"),
 
     # Contact
-    ui.h4("Github"),
-    ui.output_text("github")
+    ui.h4("Contact"),
+    ui.p("Learn more about our project on GitHub: ",
+         ui.a("Bodyfat-Prediction", href="https://github.com/unimodular/Bodyfat-Prediction.git"))
 )
 
 # Server
@@ -88,12 +89,6 @@ def server(input, output, session):
             "Age Group": ["20-29", "30-39", "40-49", "50-59", "60+"],
             "Men Ideal BF (%)": [8.5, 11.5, 14.5, 17.5, 20.3]
         })
-
-    # Contact
-    @output
-    @render.text
-    def github():
-        return "Feel free to contact us: https://github.com/unimodular/Bodyfat-Prediction.git"
 
 # Run App
 app = App(app_ui, server)
